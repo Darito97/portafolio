@@ -1,0 +1,526 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #F7F7F7;
+    font-family: 'Merriweather' ;
+    margin: 0;
+    padding: 0;
+}
+header{
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    animation: aparecer linear 5s;
+
+}
+    header>ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+        header>ul>li{
+            list-style-type: none;
+        }
+            header>ul>li>a{
+                border-radius: 10px;
+                color:#000;
+                font-size: 18px;
+                padding: 5px 20px;
+                text-decoration: none;
+            }
+                header> ul > li > a:hover{
+                    background-color: #aaa;
+                }
+            header>ul>li>a>img{
+                height: 20px;
+                width: 20px;
+            }
+    #menuIcon{
+        display: none;
+    }
+#home{
+    background-image: url('./resources/images/Codificando.jpg');
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+
+    height: 100vh;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+    #title{
+        background-color: #2A2D34;
+        border-radius: 15px;
+        color: #F7F7F7;
+        width: 70%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        
+        animation: aparecer linear 1s;
+    }
+        #title> h1,h3{
+            display:inline-block ;
+            margin: 0;
+            line-height: 30px;
+        }
+        #title> h1{
+            font-size: 32px;
+            color: #007EA7;
+            font-weight: 700;
+        }
+        #title> h3{
+            font-size: 24px;
+        }
+        #title> ul{
+            display: flex;
+            justify-content: flex-start;
+            list-style-type: none;
+            padding: 0;
+        }
+                #title> ul > li > a{
+                    border-radius: 10px;
+                    color: #ccc;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    margin: 0 10px;
+                }
+                    #title> ul > li > a:hover{
+                        background-color: rgba(255, 255, 255, 0.25);
+                    }
+    #redes{
+        display: flex;
+        flex-direction: column;
+
+        animation: AparacerDeLaIzquierda ease 1s;
+    }
+        #redes> a{
+            padding: 10px;
+            background-color: #F7F7F7;
+        }
+        #redes> :nth-child(1){
+            border-radius: 5px 5px 0 0;
+        }
+        #redes> :nth-child(3){
+            border-radius: 0 0 5px 5px;
+        }
+        #redes > a:hover{
+            background-color: #aaa;
+        }
+    @keyframes AparacerDeLaIzquierda {
+        0%{
+            transform: translateX(150px);
+        }
+        70%{
+            transform: translateX(-20px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+    @keyframes aparecer {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    #down{
+        position: relative;
+        transform: translateY(-130px);
+        text-align: center;
+        z-index: 2;
+        
+        animation: arriba-abajo linear 1s infinite;
+    }
+    @keyframes arriba-abajo {
+        0%{
+            transform: translateY(-130px);
+        }
+        50%{
+            transform: translateY(-140px);
+        }
+        100%{
+            transform: translateY(-130px);
+        }
+    }
+    #sobreMi{
+        padding: 0 60px;
+    }
+        .subtitulo{
+            padding: 20px 0 0 0;
+            font-size: 28px;
+            color: #007EA7;
+        }
+        #sobreMi > article{
+            display: flex;
+            align-items: center;
+
+        }
+        .oculto{
+            opacity: 0;
+        }
+        .aparecer{
+            animation: aparecer 0.3s linear;
+        }
+        .aparecerDesdeAbajo{
+            animation: aparecerDesdeAbajo 1s linear;
+        }
+        @keyframes aparecerDesdeAbajo {
+            from{
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+            #sobreMi > article > :first-child {
+                padding-right: 80px;
+            }
+            #sobreMi > article > div > img{
+                width: 200px;
+            }
+            .TextoDescripcion{
+                word-spacing: 5px;
+                font-size: 18px;
+            }
+        .textCenter{
+            text-align: center;
+        }
+        #misHabilidades{
+            
+            list-style-type: none;
+            padding: 0;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+            #misHabilidades > li{
+                padding: 10px 20px;
+            }
+        #boxContactar{
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+            #btnContactar{
+                background-color: #F7F7F7;
+                border: 3px solid #000;
+                color: black;
+                font-size: 20px;
+                padding: 10px 40px;
+                text-align: center;
+                text-decoration: none;
+            }
+    #misProyectos{
+        background-color: #fff;
+        padding: 60px;
+    }
+        .project{
+            background-color: #F7F7F7;
+            box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px;
+
+            display: flex;
+
+        }
+            .Projectimage{
+                width: 30%;
+                min-width: 150px;
+                height: 240px;
+                border-radius: 10px;
+            }
+            .ProjectText{
+                width: 60%;
+                padding-left: 20px;
+                
+            }
+                .ProjectText > h4{
+                    font-size: 20px;
+                }
+                .ProjectText > p{
+                    color: #777;
+                    font-size: 16px;
+                }
+                .tecnologias{
+                    display: flex;
+                    list-style-type: none;
+                    padding-left: 0;
+                }
+                    .tecnologias> li> img{
+                        height: 30px;
+                        padding-right: 10px;
+                    }
+                .botones{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                    .btnCodigo, .btnProyecto{
+                        border-radius: 5px;
+                        color: #fff;
+                        padding: 10px 40px;
+                        margin: 10px;
+                        text-decoration: none;
+                    }
+                    .btnCodigo{
+                        background-color: #007EA7;
+                    }
+                    .btnProyecto{
+                        background-color: #2A2D34;
+                    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        footer > h5{
+            text-align: center;
+        }
+        footer > div{
+            padding-bottom: 20px;
+        }
+            footer> div> a{
+                margin: 10px;
+            }
+@media only screen and (max-width: 950px){
+    
+    #title> h1{
+        font-size: 26px;
+    }
+    #title> h3{
+        font-size: 18px;
+    }
+    #title> ul > li > a{
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+    #misHabilidades > li > img{
+        height: 60px;
+    }
+    .Projectimage{
+        height: 180px;
+    }
+        .ProjectText > h4{
+            margin: 5px 0;
+        }
+        .ProjectText > p{
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .tecnologias{
+            margin: 5px 0;
+        }
+        .botones{
+            justify-content: flex-start;
+        }
+            .btnCodigo, .btnProyecto{
+                margin: 5px 10px 0 0;
+                padding: 10px 20px;
+            }
+    
+}
+@media only screen and (max-width:700px){
+    header>ul>li>a{
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    #menu{
+        display: flex;
+    }
+    #home{
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+        #title{
+            width: 100%;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        #title> h1, h3{
+            display: block;
+        }
+        #title> h1{
+            font-size: 26px;
+        }
+        #title> h3{
+            font-size: 20px;
+        }
+        #title> ul{
+            justify-content: center;
+            margin: 15px 0 5px;
+        }
+            #title> ul > li > a{
+                font-size: 14px;
+                padding: 10px 0;
+            }
+        #redes{
+            margin-top: 20px;
+            flex-direction: row;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+            #redes> :nth-child(1){
+                border-radius: 5px 0 0 5px;
+            }
+            #redes> :nth-child(3){
+                border-radius: 0 5px 5px 0;
+            }
+    #sobreMi{
+        padding: 0 40px ;
+        text-align: center;
+    }
+        #sobreMi > article{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+            #sobreMi > article > :first-child{
+                padding: 0;
+            }
+            #sobreMi > article:nth-child(3){
+                flex-direction: column-reverse;
+            }
+        #misHabilidades{
+            margin: 0;
+        }
+            #misHabilidades > li > img{
+                height: 40px;
+            }
+    #misProyectos{
+        padding: 20px 40px;
+    }
+        .project{
+            flex-direction: column;
+            align-items: center;
+        }
+            .Projectimage{
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+            .ProjectText{
+                width: 100%;
+                padding-left: 0;
+            }
+                .ProjectText > h4{
+                    font-size: 24px;
+                    margin: 10px 0;
+                }
+                .ProjectText > p{
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+                .botones{
+                    flex-direction: column;
+                }
+                    .btnCodigo, .btnProyecto{
+                        text-align: center;
+                    }
+}
+@media only screen and (max-width:450px){
+    header{
+        height: auto;
+    }
+        #menu{
+            display: none;
+            overflow: hidden;
+            animation: extender 0.2s linear;
+        }
+
+        #menu > li{
+            text-align: right;
+            margin: 20px;
+        }
+        #menu> li> a{
+            padding: 10px;
+        }
+        @keyframes extender {
+            from{
+                height: 0;
+            }
+            to{
+                height: 224px;
+            }
+        }
+    #menuIcon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+        #menuIcon> img{
+            padding: 10px;
+            border-radius: 10px;
+        }
+            #menuIcon> img:active{
+                background-color: #aaa;
+            }
+
+        #title> ul{
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+            #title > ul > li{
+                margin: 10px 0;
+            }
+            #title > ul > li > a{
+               margin: 0;
+               padding: 10px 10px;
+            }
+    #redes > a > img{
+        height: 30px;
+    }     
+        #down > a > img{
+            width: 40px;
+            height: 20px;
+        }
+    #sobreMi{
+        padding: 0 20px;
+    }
+    #misProyectos{
+        padding: 20px;
+    }
+        .project{
+            padding: 20px;
+        }
+            .ProjectText > h4{
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+            .ProjectText > p{
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+            .btnCodigo, .btnProyecto{
+                margin: 5px 0;
+            }
+}
+
+
+
+        
+
+
+    
