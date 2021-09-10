@@ -2,5 +2,5 @@
 ### Ya que no es una pagina muy compleja la realice con las siguientes tecnologias:
 - HTML
 - CSS
--Javascript
+- Javascript
 La puedes visitar en el siguiente link https://davidalonsoruiz.netlify.app/
