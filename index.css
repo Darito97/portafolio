@@ -244,12 +244,19 @@ header{
             display: flex;
 
         }
-            .Projectimage{
+            .ProjectimageBox{
                 width: 30%;
-                min-width: 150px;
                 height: 240px;
+                min-width: 150px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                image-resolution: from-image;
                 border-radius: 10px;
             }
+                .Projectimage{
+                    width: 100%;
+                }
             .ProjectText{
                 width: 60%;
                 padding-left: 20px;
@@ -259,7 +266,7 @@ header{
                     font-size: 20px;
                 }
                 .ProjectText > p{
-                    color: #777;
+                    color: #444;
                     font-size: 16px;
                 }
                 .tecnologias{
