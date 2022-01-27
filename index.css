@@ -350,6 +350,21 @@ footer > div > a {
   }
   #menu {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 5px;
+  }
+  #menu > li>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+  }
+  #menu > li > a:hover {
+    background-color: transparent;
   }
   #home {
     flex-direction: column;
