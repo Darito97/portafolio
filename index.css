@@ -22,7 +22,6 @@ header > ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   width: 100%;
 }
 header > ul > li {
@@ -89,15 +88,17 @@ h3 {
 #title > ul {
   display: flex;
   justify-content: flex-start;
+  gap: 10px;
   list-style-type: none;
   padding: 0;
 }
 #title > ul > li > a {
   border-radius: 10px;
   color: #ccc;
+  display: inline-block;
+  background-color: #444;
   text-decoration: none;
   padding: 10px 20px;
-  margin: 0 10px;
 }
 #title > ul > li > a:hover {
   background-color: rgba(255, 255, 255, 0.25);
@@ -306,6 +307,7 @@ footer > div {
 }
 footer > div > a {
   margin: 10px;
+  text-decoration: none;
 }
 @media only screen and (max-width: 950px) {
   #title > h1 {
@@ -355,13 +357,11 @@ footer > div > a {
     margin: 0;
     padding: 5px;
   }
-  #menu > li>a{
+  #menu > li > a {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
-
   }
   #menu > li > a:hover {
     background-color: transparent;
@@ -388,11 +388,19 @@ footer > div > a {
   }
   #title > ul {
     justify-content: center;
+    gap: 5px;
     margin: 15px 0 5px;
   }
   #title > ul > li > a {
     font-size: 14px;
-    padding: 10px 0;
+    margin: 0;
+    display: inline-block;
+    padding: 10px;
+    background-color: #444;
+  }
+
+  #title > ul > li > a:hover {
+    background-color: #444;
   }
   #redes {
     margin-top: 20px;
@@ -434,9 +442,13 @@ footer > div > a {
     flex-direction: column;
     align-items: center;
   }
+  .ProjectimageBox {
+    width: 100%;
+  }
   .Projectimage {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     margin-bottom: 10px;
   }
   .ProjectText {
