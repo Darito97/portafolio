@@ -43,6 +43,7 @@ header > ul > li > a {
 }
 header > ul > li > a:hover {
   background-color: #aaa;
+  border-radius: 10px 10px 0 0;
 }
 header > ul > li > a > img {
   height: 20px;
