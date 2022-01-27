@@ -23,11 +23,18 @@ header > ul {
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  padding: 10px;
+  margin: 0;
 }
 header > ul > li {
   list-style-type: none;
 }
 header > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   color: #000;
   font-size: 18px;
@@ -246,14 +253,11 @@ h3 {
   width: 30%;
   height: 240px;
   min-width: 150px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  image-resolution: from-image;
-  border-radius: 10px;
 }
 .Projectimage {
   width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .ProjectText {
   width: 60%;
