@@ -488,16 +488,37 @@ header{
         #title> ul{
             flex-wrap: wrap;
             justify-content: space-around;
+            gap: 20px;
         }
             #title > ul > li{
-                margin: 10px 0;
+              border-radius: 8px;
             }
             #title > ul > li > a{
                margin: 0;
-               padding: 10px 10px;
+               display: inline-block;
+              padding: 10px;
+              background-color: #444;
+              width: 100px;
+            }
+            #title > ul > li > a:hover{
+              background-color: #444;
             }
     #redes > a > img{
         height: 30px;
+    }
+      #down{
+        transform: translateY(-40px);
+      }
+      @keyframes arriba-abajo {
+        0%{
+            transform: translateY(-40px);
+        }
+        50%{
+            transform: translateY(-60px);
+        }
+        100%{
+            transform: translateY(-40px);
+        }
     }     
         #down > a > img{
             width: 40px;
@@ -519,6 +540,14 @@ header{
             .ProjectText > p{
                 font-size: 14px;
                 margin-bottom: 0;
+            }
+            .ProjectimageBox{
+              width: 100%;
+            }
+            .Projectimage{
+              border-radius: 8px;
+              height: 100%;
+              object-fit: cover;
             }
             .btnCodigo, .btnProyecto{
                 margin: 5px 0;
