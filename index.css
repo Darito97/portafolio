@@ -6,9 +6,15 @@
 }
 body {
   background-color: #f7f7f7;
-  font-family: "Merriweather";
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+  line-height: 150%;
+}
+h1,h2,h3{
+  font-family: "Merriweather";
 }
 header {
   backdrop-filter: blur(10px);
@@ -275,6 +281,7 @@ h3 {
 }
 .ProjectText > h4 {
   font-size: 20px;
+  margin: 10px 0;
 }
 .ProjectText > p {
   color: #444;
