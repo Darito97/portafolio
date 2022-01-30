@@ -212,6 +212,8 @@ h3 {
 }
 #sobreMi > article > div > img {
   width: 200px;
+  object-fit: contain;
+  object-position: center;
 }
 .TextoDescripcion {
   word-spacing: 5px;
