@@ -215,6 +215,9 @@ h3 {
   object-fit: contain;
   object-position: center;
 }
+.photo_Aboutme{
+  object-fit: cover;
+}
 .TextoDescripcion {
   word-spacing: 5px;
   font-size: 18px;
